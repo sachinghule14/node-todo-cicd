@@ -16,7 +16,7 @@ pipeline {
             steps{
                 withCredentials([usernamePassword(credentialsId: '	Dockerhubuserpass', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
         	     bat "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-                 bat 'docker push trainwithshubham/node-todo-test:latest'
+                 bat 'docker push sachinghule/todo-app1:latest'
                 }
             }
         }
